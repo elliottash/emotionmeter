@@ -1,4 +1,4 @@
-# emotion-reason-NLP
+# emotionmeter
 Python code for producing emotionality scores from Gennaro and Ash (2021).
 
 To set up,
