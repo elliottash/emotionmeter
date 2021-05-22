@@ -51,6 +51,8 @@ class EmotionMeter:
     def calculate_score(self, df):
         # load SpaCy package
         nlp = spacy.load("en_core_web_lg")
+        cognition_list = self.load_cognition_list()
+        affect_list = self.load_affection_list()
 
         # cognition and affection scores CHANGE IF INCLUDE HASHTAG
         cognition_score = []
@@ -71,7 +73,6 @@ class EmotionMeter:
 
         # record the smoothened affection:cognition score ratio to df
         df['ratio'] = (df['affection'] + 1) / (df['cognition'] + 1)
-
         return df
 
     def calculate_num_token(self, df):
