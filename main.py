@@ -8,7 +8,7 @@ import random
 import re
 import spacy
 
-from emotion-twitter import EmotionMeter
+from emotionmeter import EmotionMeter
 
 meter = EmotionMeter(data_path = "ExtractedTweets.csv")
 
