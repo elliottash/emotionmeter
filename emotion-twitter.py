@@ -119,7 +119,7 @@ class EmotionMeter:
         df['hashtags_length'] = hashtags_length
         return df
 
-    def calculate_all(self):
+    def calculate_all(self, df):
         df = load_data(self.data_path)
         df = self.calculate_score(df)
         df = self.calculate_num_token(df)
