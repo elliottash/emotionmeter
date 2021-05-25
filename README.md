@@ -7,7 +7,7 @@ To set up,
 - see `main.py` for example usage, e.g.:
 
 ```
-from emotion-twitter import EmotionMeter
+from emotionmeter import EmotionMeter
 
 meter = EmotionMeter(data_path = "ExtractedTweets.csv")
 
