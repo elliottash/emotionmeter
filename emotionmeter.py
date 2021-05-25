@@ -26,12 +26,15 @@ class EmotionMeter:
         f.close()
         return affection_list
 
-    def load_data(self, data_path):
+    def load_data(self, data_path, text_column:str = "Tweet"):
         # import tweet data from .csv
         # texts contain tweets on "Tweet" column!
         df = pd.read_csv(data_path)
         if "Tweet" not in df.columns():
             raise Exception("df must have column Tweet!")
+            pass
+        else:
+            df.columns = ["Tweet" if (col == text_column) else col for col in df.columns]
         return df
 
     def preprocess_text(self, tweet, keep_hashtag_text:bool = False):
@@ -119,8 +122,8 @@ class EmotionMeter:
         df['hashtags_length'] = hashtags_length
         return df
 
-    def calculate_all(self):
-        df = load_data(self.data_path)
+    def calculate_all(self, text_column:str = "Tweet"):
+        df = load_data(self.data_path, text_column=text_column)
         df = self.calculate_score(df)
         df = self.calculate_num_token(df)
         df = self.detect_lang(df)
