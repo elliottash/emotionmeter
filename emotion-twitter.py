@@ -128,12 +128,12 @@ class EmotionMeter:
         df = self.detect_num_hashtag(df)
         return df
 
-    def sample_emotional_tweets(self, df, most_emotional:bool = True):
+    def sample_emotional_tweets(self, most_emotional:bool = True):
         # for each party, compute its most emotional tweets randomly chosen 10 from top 5%
         # chosen from those with at least 4 tokens (otherwise, too little context)
         # and only English tweets
         # REQUIRE df to have column "Party"
-        df = self.calculate_all(df)
+        df = self.calculate_all()
         sample_tweet = dict(list)
 
         if "Party" not in df.columns():
@@ -146,12 +146,12 @@ class EmotionMeter:
             sample_tweet[party] = sample
         return pd.DataFrame(sample_tweet)
 
-    def odd_ratio_hashtag_party(self, df, party:str):
+    def odd_ratio_hashtag_party(self, party:str):
         # for each party, compute its most emotional tweets randomly chosen 10 from top 5%
         # chosen from those with at least 4 tokens (otherwise, too little context)
         # and only English tweets
         # REQUIRE df to have column "Party"
-        df = self.calculate_all(df)
+        df = self.calculate_all()
         df = df[(df['language'] == 'en') & (df['token'] > 4)].sort_values('ratio', ascending = False)
         num = (1 + sum(pd.Series(df['hashtags']).str.contains(hashtag)))
         den = len(df['hashtags'])
