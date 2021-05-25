@@ -11,6 +11,7 @@ from emotionmeter import EmotionMeter
 
 meter = EmotionMeter(data_path = "ExtractedTweets.csv")
 
+meter_with_score = meter.calculate_all() # get df with calculated reasoning and emotional scores
 print(meter.sample_emotional_tweets(most_emotional = True)) # print sample most emotional tweets
 print(meter.odd_ratio_hashtag_party(party = "Republican")) # print odd ratio per hashtag in Republican's tweets
 ```
