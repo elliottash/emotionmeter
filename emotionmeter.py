@@ -30,7 +30,7 @@ class EmotionMeter:
         # import tweet data from .csv
         # texts contain tweets on "Tweet" column!
         df = pd.read_csv(data_path)
-        if "Tweet" not in df.columns():
+        if "Tweet" not in df.columns:
             raise Exception("df must have column Tweet!")
             pass
         else:
