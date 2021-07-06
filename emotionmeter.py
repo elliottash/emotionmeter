@@ -123,7 +123,7 @@ class EmotionMeter:
         return df
 
     def calculate_all(self, text_column:str = "Tweet"):
-        df = load_data(self.data_path, text_column=text_column)
+        df = self.load_data(self.data_path, text_column=text_column)
         df = self.calculate_score(df)
         df = self.calculate_num_token(df)
         df = self.detect_lang(df)
