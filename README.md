@@ -15,9 +15,9 @@ To use,
 - see `main.py` for example usage, e.g.:
 
 ```
-from emotionmeter import EmotionMeter
+from emotionmeter import EmotionMeter # import the package
 
-meter = EmotionMeter(data_path="data/ExtractedTweets.csv", text_column="Tweet")
+meter = EmotionMeter(data_path="data/ExtractedTweets.csv", text_column="Tweet") # and create the instance of it
 
 meter_with_score = meter.calculate_all() # get df with calculated reasoning and emotional scores
 print(meter.sample_emotional_tweets(most_emotional = True)) # print sample most emotional tweets
