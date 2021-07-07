@@ -27,4 +27,4 @@ print(meter.odd_ratio_hashtag_party(party = "Republican")) # print odd ratio per
 
 Some notes:
 - If you would like to import the package into your own script outside the package folder, change the directory in the import part `from ... import EmotionMeter` on the first line
-- Also change the `data_path` if your data is saved somewhere else other than `/data`
+- Also change the `data_path` if your data is saved somewhere else other than in folder `data`
