@@ -7,6 +7,7 @@ import preprocessor as p
 import random
 import re
 import spacy
+nlp = spacy.load("en_core_web_lg")
 
 class EmotionMeter:
     def __init__(self, data_path:str = "ExtractedTweets.csv"):
@@ -39,8 +40,7 @@ class EmotionMeter:
         return tweet
 
     def calculate_score(self, df):
-        # load SpaCy package
-        nlp = spacy.load("en_core_web_lg")
+        # load SpaCy package        
         cognition_list = self.cog
         affect_list = self.aff
 
