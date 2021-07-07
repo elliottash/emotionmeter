@@ -9,6 +9,7 @@ To set up,
 and
 
 - put the .csv file that contains your dataset in folder `data`. You may try with [our dataset](https://polybox.ethz.ch/index.php/s/Us2HeNYzsu509dm).
+- make sure the word lists `affect_list.txt` and `cognition_list.txt` are in folder `word_lists`. You could get it from the same [link](https://polybox.ethz.ch/index.php/s/Us2HeNYzsu509dm) if they do not exist.
 
 To use, 
 - import the package `EmotionMeter` and create the instance of it, specifying `data_path` and `text_column`
