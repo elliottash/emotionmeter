@@ -24,7 +24,7 @@ class EmotionMeter:
         if text_column not in df.columns:
             raise Exception("df must have column "+text_column)
         else:
-            df.columns = ["Tweet" if (col == text_column) else col for col in df.columns]
+            df.columns = [text_column if (col == text_column) else col for col in df.columns]
         return df
 
     @staticmethod
@@ -112,8 +112,8 @@ class EmotionMeter:
         df['hashtags_length'] = hashtags_length
         return df
 
-    def calculate_score_and_other_stats(self, text_column:str = "Tweet"):
-        df = self.load_data(self.data_path, text_column=text_column)
+    def calculate_score_and_other_stats(self):
+        df = self.load_data(self.data_path, text_column=self.text_column)
         df = self.calculate_score(df)
         df = self.calculate_num_token(df)
         df = self.detect_lang(df)
