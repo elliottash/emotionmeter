@@ -18,11 +18,11 @@ To use,
 ```
 from emotionmeter import EmotionMeter # import the package
 
-meter = EmotionMeter(data_path="data/ExtractedTweets.csv", text_column="Tweet") # and create the instance of it
+meter = EmotionMeter(data_path="data/smallExtractedTweets.csv", text_column="Tweet") # and create the instance of it
 
-meter_with_score = meter.calculate_all() # get df with calculated reasoning and emotional scores
-print(meter.sample_emotional_tweets(most_emotional = True)) # print sample most emotional tweets
-print(meter.odd_ratio_hashtag_party(party = "Republican")) # print odd ratio per hashtag in Republican's tweets
+meter_with_score = meter.calculate_score_and_other_stats() # get df with calculated reasoning and emotional scores
+print(meter.show_sample_emotional_tweets(from_most_emotional=True)) # print sample most emotional tweets
+print(meter.show_hashtags_sorted_by_odd_for_party(party="Republican")) # print odd ratio per hashtag in Republican's tweets
 ```
 
 Some notes:
