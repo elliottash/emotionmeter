@@ -1,7 +1,7 @@
 # emotionmeter
 Python code for producing emotionality scores from Gennaro and Ash (2021).
 
-To set up,
+To set up, from inside the main folder:
 
 - type `pip install -r requirements.txt` in command line to install dependency packages (or pip3 in some systems e.g. Ubuntu)
 - type `python -m spacy download en_core_web_lg` in command line to install necessary language corpus for package `spacy` (or python3 in some systems)
