@@ -22,7 +22,7 @@ meter = EmotionMeter(data_path="data/smallExtractedTweets.csv", text_column="Twe
 
 meter_with_score = meter.calculate_score_and_other_stats() # get df with calculated reasoning and emotional scores
 print(meter.show_sample_emotional_tweets(from_most_emotional=True)) # print sample most emotional tweets
-print(meter.show_hashtags_sorted_by_odd_for_party(party="Republican")) # print odd ratio per hashtag in Republican's tweets
+print(meter.show_hashtags_sorted_by_odd_for_party(party="Democrat")) # print odd ratio per hashtag in Republican's tweets
 ```
 
 Some notes:
