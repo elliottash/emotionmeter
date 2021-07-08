@@ -5,7 +5,7 @@ To set up, from inside the main folder:
 
 - type `pip install -r requirements.txt` in command line to install dependency packages (or pip3 in some systems e.g. Ubuntu)
 - type `python -m spacy download en_core_web_sm` in command line to install the necessary language corpus for package `spacy` (or python3 in some systems). 
-    - You may also use en_core_web_lg for the large-sized corpus, en_core_web_md for the medium-sized corpus
+    - You may download other spacy-supported corpus in the format `{lang}_core_web_{size}` and specify it in `corpus` argument in the EmojionMeter initizalizer. You may check the list of supported languages with [spacy](https://spacy.io/usage/models#languages)
 
 and
 
