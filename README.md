@@ -10,10 +10,13 @@ To set up, from inside the main folder:
 and
 
 - put the .csv file that contains your dataset in folder `data`. You may try with [our dataset](https://polybox.ethz.ch/index.php/s/Us2HeNYzsu509dm).
-- make sure the word lists `affect_list.txt` and `cognition_list.txt` are in folder `word_lists`. You may also use your own. You could get it from the same [link](https://polybox.ethz.ch/index.php/s/Us2HeNYzsu509dm) if they do not already exist. 
+- make sure the word lists `affect_list.txt` and `cognition_list.txt` are in folder `word_lists`. You may also use your own or ours that is already provided (or from the same [link](https://polybox.ethz.ch/index.php/s/Us2HeNYzsu509dm) if they are missing). 
 
 To use, 
-- import the package `EmotionMeter` and create the instance of it, specifying `data_path` and `text_column`
+- import the package `EmotionMeter` and create the instance of it, specifying 
+    - `data_path` for the path to your .csv data
+    - `text_column` for the text column's name in the .csv
+    - `corpus` in the format `{lang}_core_web_{size}`, where `size` could be `sm` for small, `md` for medium, or `lg` for large.
 - see `main.py` for example usage, e.g.:
 
 ```
@@ -28,4 +31,4 @@ print(meter.show_hashtags_sorted_by_odd_for_party(party="Democrat")) # print odd
 
 Some notes:
 - If you would like to import the package into your own script outside the package folder, change the directory in the import part `from ... import EmotionMeter` on the first line
-- Change the `data_path` to the path to your data, `text_column` to the text column's name, and `corpus` if you use it for other language or corpus version in the format `{lang}_core_web_{size}`, where `size` could be `sm` for small, `md` for medium, or `lg` for large.
+- Change the `data_path` to the path to your data, `text_column` to the text column's name, and `corpus` if you use it for other language or corpus version 
