@@ -5,7 +5,8 @@ To set up, from inside the main folder:
 
 - type `pip install -r requirements.txt` in command line to install dependency packages (or pip3 in some systems e.g. Ubuntu)
 - type `python -m spacy download en_core_web_sm` in command line to install the necessary language corpus for package `spacy` (or python3 in some systems). 
-    - It is possible to use other spacy-supported corpus in the format `{lang}_core_web_{size}`. Make sure to download it (here) and specify it in `corpus` argument in the EmojionMeter initizalizer (see the example below). You may check the list of supported languages with [spacy](https://spacy.io/usage/models#languages)
+    - It is possible to use other spacy-supported corpus in the format `{lang}_core_web_{size}`, where size could be sm for small, md for medium, or lg for large. Make sure to download it (here) and specify it in `corpus` argument in the EmojionMeter initizalizer (see the example below). 
+    - You may check the list of supported languages with [spacy](https://spacy.io/usage/models#languages)
 
 and
 
@@ -16,7 +17,7 @@ To use,
 - import the package `EmotionMeter` and create the instance of it, specifying 
     - `data_path` for the path to your .csv data
     - `text_column` for the text column's name in the .csv
-    - `corpus` in the format `{lang}_core_web_{size}`, where `size` could be `sm` for small, `md` for medium, or `lg` for large.
+    - `corpus` in the format `{lang}_core_web_{size}`
 - see `main.py` for example usage, e.g.:
 
 ```
