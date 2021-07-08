@@ -7,7 +7,10 @@ import preprocessor as p
 import random
 import re
 import spacy
-nlp = spacy.load("en_core_web_lg")
+try:
+    nlp = spacy.load("en_core_web_lg")
+except:
+    nlp = spacy.load("en_core_web_sm")
 
 class EmotionMeter:
     def __init__(self, data_path:str = "data/smallExtractedTweets.csv", text_column:str = "Tweet"):
