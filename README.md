@@ -31,4 +31,3 @@ print(meter.show_hashtags_sorted_by_odd_for_party(party="Democrat")) # print odd
 
 Some notes:
 - If you would like to import the package into your own script outside the package folder, change the directory in the import part `from ... import EmotionMeter` on the first line
-- Change the `data_path` to the path to your data, `text_column` to the text column's name, and `corpus` if you use it for other language or corpus version 
