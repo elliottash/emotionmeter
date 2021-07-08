@@ -24,10 +24,10 @@ class EmotionMeter:
         self.load_corpus(corpus)
 
     def load_cognition_and_cognition_word_lists(self):
-        with open(affection_path, "r") as f:
+        with open(self.affection_path, "r") as f:
             affect_list = f.readlines()
         self.aff = [word.strip() for word in affect_list]
-        with open(affection_path, "r") as f:
+        with open(self.cognition_path, "r") as f:
             cognition_list = f.readlines()
         self.cogg = [word.strip() for word in cognition_list]
 
