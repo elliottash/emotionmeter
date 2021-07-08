@@ -29,7 +29,7 @@ class EmotionMeter:
         self.aff = [word.strip() for word in affect_list]
         with open(self.cognition_path, "r") as f:
             cognition_list = f.readlines()
-        self.cogg = [word.strip() for word in cognition_list]
+        self.cog = [word.strip() for word in cognition_list]
 
 
     def load_corpus(self, corpus:str):
