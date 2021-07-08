@@ -1,12 +1,7 @@
 from langdetect import detect
 import nltk 
-
-try:
-    from nltk.corpus import stopwords
-except:
-    nltk.download('stopwords')
-    from nltk.corpus import stopwords
-
+nltk.download('stopwords')
+from nltk.corpus import stopwords
 import pandas as pd
 import preprocessor as p
 import random
