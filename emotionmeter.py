@@ -26,16 +26,19 @@ class EmotionMeter:
         corpus_prefix = corpus[:-2]
         try:
             self.nlp = spacy.load(f"{corpus_prefix}lg")
+            return
         except:
             print("large-sized corpus not available, trying medium one...")
             pass
         try:
             self.nlp = spacy.load(f"{corpus_prefix}md")
+            return
         except:
             print("medium-sized corpus not available, trying small one...")
             pass
         try:
             self.nlp = spacy.load(f"{corpus_prefix}sm")
+            return
         except:
             print("no corpus not available... try again")
             raise ValueError(f"no corpus {corpus_prefix}")
