@@ -38,7 +38,7 @@ class EmotionMeter:
             self.nlp = spacy.load(f"{corpus_prefix}sm")
         except:
             print("no corpus not available... try again")
-            raise MissingCorpusError(f"no corpus {corpus_prefix}")
+            raise ValueError(f"no corpus {corpus_prefix}")
 
     @staticmethod
     def load_data(data_path, text_column:str = "Tweet"):
