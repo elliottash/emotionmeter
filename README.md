@@ -18,7 +18,7 @@ To use,
     - `data_path` for the path to your .csv data, e.g. `"data/smallExtractedTweets.csv"`
     - `text_column` for the text column's name in the .csv, e.g. `"Tweet"`
     - `corpus` in the format `{lang}_core_web_{size}`, e.g. `"en_core_web_sm"`
-- see `main.py` for example usage, e.g.:
+- for example usage, e.g.:
 
 ```
 from emotionmeter import EmotionMeter # import the package
