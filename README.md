@@ -17,7 +17,7 @@ To use,
 - import the package `EmotionMeter` and create the instance of it, specifying 
     - `data_path` for the path to your .csv data, e.g. `"data/smallExtractedTweets.csv"`
     - `text_column` for the text column's name in the .csv, e.g. `"Tweet"`
-    - `corpus` in the format `{lang}_core_web_{size}`, e.g. `"en_core_web_sm"`
+    - `corpus` is the spaCy model for the pre-trained embeddings with format `{lang}_core_web_{size}`, e.g. `"en_core_web_sm"`
 - for example usage, e.g.:
 
 ```
