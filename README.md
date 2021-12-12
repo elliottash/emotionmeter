@@ -21,13 +21,22 @@ To use,
 - for example usage, e.g.:
 
 ```
-from emotionmeter import EmotionMeter # import the package
+# import the package
+from emotionmeter import EmotionMeter 
 
-meter = EmotionMeter(data_path="data/smallExtractedTweets.csv", text_column="Tweet", corpus="en_core_web_sm") # and create the instance of it
+# and create the instance of it
+meter = EmotionMeter(data_path="data/smallExtractedTweets.csv", 
+                     text_column="Tweet", 
+                     corpus="en_core_web_sm") 
 
-meter_with_score = meter.calculate_score_and_other_stats() # get df with calculated reasoning and emotional scores
-print(meter.show_sample_emotional_tweets(from_most_emotional=True)) # print sample most emotional tweets
-print(meter.show_hashtags_sorted_by_odd_for_party(party="Democrat")) # print odd ratio per hashtag in Democrat's tweets
+# get df with calculated reasoning and emotional scores
+meter_with_score = meter.calculate_score_and_other_stats() 
+
+# print sample most emotional tweets
+print(meter.show_sample_emotional_tweets(from_most_emotional=True)) 
+
+# print odds ratio per hashtag in Democrat's tweets
+print(meter.show_hashtags_sorted_by_odd_for_party(party="Democrat")) 
 ```
 
 Some notes:
